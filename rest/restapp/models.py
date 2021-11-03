@@ -1,0 +1,12 @@
+from django.db import models
+
+# Create your models here.
+class Task (models.Model):
+    task_name=models.CharField(max_length=200)
+
+    task_desc=models.TextField(max_length=1000)
+    date_created=models.DateTimeField(auto_now=True)
+    completed=models.BooleanField(default=False)
+    img=models.ImageField(upload_to="image",default="img.jpg")
+
+
